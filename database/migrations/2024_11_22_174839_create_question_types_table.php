@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('answers', function (Blueprint $table) {
-            $table->id('answer_id');
-            $table->foreignId('language_id');
-            $table->foreign('language_id')->references('language_id')->on('languages');
-            $table->text('answer');
+        Schema::create('question_types', function (Blueprint $table) {
+            $table->id('question_type_id');
+            $table->string('question_type');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('answers');
+        Schema::dropIfExists('question_types');
     }
 };
