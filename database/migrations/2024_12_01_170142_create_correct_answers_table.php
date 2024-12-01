@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('questions', function (Blueprint $table) {
-            $table->id('question_id');
-            $table->foreignId(column: 'language_id');
-            $table->text('question');
-            $table->string('url_slug',255)->nullable()->unique();
+        Schema::create('correct_answers', function (Blueprint $table) {
+            $table->id('correct_answer_id');
+            $table->foreignId('question_id')->constrained('questions', 'question_id');
+            $table->foreignId('question_answer_id')->constrained('question_answers', 'question_answer_id');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('questions');
+        Schema::dropIfExists('correct_answers');
     }
 };
