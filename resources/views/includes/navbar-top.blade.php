@@ -12,7 +12,7 @@
                     <div class="d-flex align-items-center"><img
                             src="{{ asset('admin/img/icons/logo.png') }}" alt="phoenix"
                             width="27" />
-                        <h5 class="logo-text ms-2 d-none d-sm-block">phoenix</h5>
+                        <h5 class="logo-text ms-2 d-none d-sm-block">quizzyyy</h5>
                     </div>
                 </div>
             </a>
