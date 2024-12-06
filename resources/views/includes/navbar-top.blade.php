@@ -591,7 +591,7 @@
                     href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                     aria-haspopup="true" aria-expanded="false">
                     <div class="avatar avatar-l ">
-                        <img class="rounded-circle " src="{{ asset('admin/img/team/40x40/57.webp') }}"
+                        <img class="rounded-circle " src="{{ asset('admin/img/samnads.jpg') }}"
                             alt="" />
 
                     </div>
@@ -603,10 +603,10 @@
                             <div class="text-center pt-4 pb-3">
                                 <div class="avatar avatar-xl ">
                                     <img class="rounded-circle "
-                                        src="{{ asset('admin/img/team/72x72/57.webp') }}" alt="" />
+                                        src="{{ asset('admin/img/samnads.jpg') }}" alt="" />
 
                                 </div>
-                                <h6 class="mt-2 text-body-emphasis">Jerry Seinfield</h6>
+                                <h6 class="mt-2 text-body-emphasis">User</h6>
                             </div>
                             <div class="mb-3 mx-3">
                                 <input class="form-control form-control-sm" id="statusUpdateInput"
