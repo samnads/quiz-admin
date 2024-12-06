@@ -6659,7 +6659,7 @@
   docReady(toastInit);
   docReady(tooltipInit);
   docReady(featherIconsInit);
-  docReady(basicEchartsInit);
+  //docReady(basicEchartsInit);
   docReady(bulkSelectInit);
   docReady(listInit);
   docReady(anchorJSInit);
