@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Language extends Model
 {
     use SoftDeletes;
+    protected $primaryKey = 'language_id';
 }

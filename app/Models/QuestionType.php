@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class QuestionType extends Model
 {
     use SoftDeletes;
+    protected $primaryKey = 'question_type_id';
 }

@@ -26,21 +26,13 @@
                     <h4 class="fs-7 mb-0">Basic Details</h4>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelectTask">
-                                <option selected="selected">Select language</option>
-                                <option value="1">English</option>
-                            </select>
+                            <livewire:language-dropdown />
                             <label for="floatingSelectTask">Language</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelectPrivacy">
-                                <option selected="selected">Select type</option>
-                                <option value="1">Show Answer</option>
-                                <option value="2">Multiple Choice</option>
-                                <option value="3">Data select topic Three</option>
-                            </select>
+                            <livewire:question-type-dropdown />
                             <label for="floatingSelectPrivacy">Type</label>
                         </div>
                     </div>
