@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('language_id')->references('language_id')->on('languages');
             $table->text('answer');
             $table->string('url_slug',255)->nullable()->unique();
+            $table->foreignId('created_by_user_id')->constrained('users', 'user_id');
             $table->timestamps();
             $table->softDeletes();
         });

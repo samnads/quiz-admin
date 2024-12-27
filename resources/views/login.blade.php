@@ -80,10 +80,10 @@
                                     </div>
                                     <div class="position-relative z-n1 mb-6 d-none d-md-block text-center mt-md-15"><img
                                             class="auth-title-box-img d-dark-none"
-                                            src="{{ asset('admin/img/spot-illustrations/auth.png') }}"
-                                            alt="" /><img class="auth-title-box-img d-light-none"
-                                            src="{{ asset('admin/img/spot-illustrations/auth-dark.png') }}"
-                                            alt="" /></div>
+                                            src="{{ asset('admin/img/spot-illustrations/auth.png') }}" alt="" /><img
+                                            class="auth-title-box-img d-light-none"
+                                            src="{{ asset('admin/img/spot-illustrations/auth-dark.png') }}" alt="" />
+                                    </div>
                                 </div>
                                 <div class="col mx-auto">
                                     <div class="auth-form-box">
@@ -108,45 +108,50 @@
                                             <hr class="bg-body-secondary mt-5 mb-4" />
                                             <div class="divider-content-center bg-body-emphasis">or use email</div>
                                         </div>
-                                        <div class="mb-3 text-start">
-                                            <label class="form-label" for="email">Email address</label>
-                                            <div class="form-icon-container">
-                                                <input class="form-control form-icon-input" id="email"
-                                                    type="email" placeholder="name@example.com" /><span
-                                                    class="fas fa-user text-body fs-9 form-icon"></span>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 text-start">
-                                            <label class="form-label" for="password">Password</label>
-                                            <div class="form-icon-container" data-password="data-password">
-                                                <input class="form-control form-icon-input pe-6" id="password"
-                                                    type="password" placeholder="Password"
-                                                    data-password-input="data-password-input" /><span
-                                                    class="fas fa-key text-body fs-9 form-icon"></span>
-                                                <button
-                                                    class="btn px-3 py-0 h-100 position-absolute top-0 end-0 fs-7 text-body-tertiary"
-                                                    data-password-toggle="data-password-toggle"><span
-                                                        class="uil uil-eye show"></span><span
-                                                        class="uil uil-eye-slash hide"></span></button>
-                                            </div>
-                                        </div>
-                                        <div class="row flex-between-center mb-7">
-                                            <div class="col-auto">
-                                                <div class="form-check mb-0">
-                                                    <input class="form-check-input" id="basic-checkbox"
-                                                        type="checkbox" checked="checked" />
-                                                    <label class="form-check-label mb-0" for="basic-checkbox">Remember
-                                                        me</label>
+                                        <form id="login">
+                                            <div class="mb-3 text-start">
+                                                <label class="form-label" for="email">Email address</label>
+                                                <div class="form-icon-container">
+                                                    <input class="form-control form-icon-input" id="email"
+                                                        name="username" placeholder="name@example.com"
+                                                        value="admin" /><span
+                                                        class="fas fa-user text-body fs-9 form-icon"></span>
                                                 </div>
                                             </div>
-                                            <div class="col-auto"><a class="fs-9 fw-semibold"
-                                                    href="{{ asset('admin/pages/authentication/card/forgot-password.html') }}">Forgot
-                                                    Password?</a></div>
-                                        </div>
-                                        <button class="btn btn-primary w-100 mb-3">Sign In</button>
-                                        <div class="text-center"><a class="fs-9 fw-bold"
-                                                href="{{ asset('admin/pages/authentication/card/sign-up.html') }}">Create
-                                                an account</a></div>
+                                            <div class="mb-3 text-start">
+                                                <label class="form-label" for="password">Password</label>
+                                                <div class="form-icon-container" data-password="data-password">
+                                                    <input class="form-control form-icon-input pe-6" name="password"
+                                                        type="password" placeholder="Password"
+                                                        data-password-input="data-password-input"
+                                                        value="12345678" /><span
+                                                        class="fas fa-key text-body fs-9 form-icon"></span>
+                                                    <button
+                                                        class="btn px-3 py-0 h-100 position-absolute top-0 end-0 fs-7 text-body-tertiary"
+                                                        data-password-toggle="data-password-toggle"><span
+                                                            class="uil uil-eye show"></span><span
+                                                            class="uil uil-eye-slash hide"></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="row flex-between-center mb-7">
+                                                <div class="col-auto">
+                                                    <div class="form-check mb-0">
+                                                        <input class="form-check-input" id="basic-checkbox"
+                                                            type="checkbox" checked="checked" />
+                                                        <label class="form-check-label mb-0"
+                                                            for="basic-checkbox">Remember
+                                                            me</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto"><a class="fs-9 fw-semibold"
+                                                        href="{{ asset('admin/pages/authentication/card/forgot-password.html') }}">Forgot
+                                                        Password?</a></div>
+                                            </div>
+                                            <button class="btn btn-primary w-100 mb-3" type="submit">Sign In</button>
+                                            <div class="text-center"><a class="fs-9 fw-bold"
+                                                    href="{{ asset('admin/pages/authentication/card/sign-up.html') }}">Create
+                                                    an account</a></div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -156,6 +161,9 @@
             </div>
         </div>
     </main>
+    <script>
+        const _api_url = "{{url('api/admin')}}/";
+    </script>
     <!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->
@@ -176,6 +184,7 @@
     {{-- <script src="{{ asset('admin/vendors/feather-icons/feather.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('admin/vendors/dayjs/dayjs.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('admin/js/phoenix.js') }}"></script> --}}
+    <script src="{{ asset('admin/js/login.js?v=').time() }}"></script>
 </body>
 
 </html>

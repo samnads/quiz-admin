@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id('question_id');
-            $table->foreignId(column: 'language_id');
+            $table->foreignId('language_id');
             $table->text('question');
             $table->string('url_slug',255)->nullable()->unique();
+            $table->foreignId('created_by_user_id')->constrained('users', 'user_id');
             $table->timestamps();
             $table->softDeletes();
         });
