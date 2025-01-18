@@ -910,7 +910,7 @@
                         </div>
                     </div>
                     <!-- parent pages-->
-                    <div class="nav-item-wrapper"><a class="nav-link label-1" href="../apps/calendar.html"
+                    <div class="nav-item-wrapper"><a class="nav-link label-1 active" href="../apps/calendar.html"
                             role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                         data-feather="calendar"></span></span><span
@@ -926,7 +926,7 @@
                     </p>
                     <hr class="navbar-vertical-line" />
                     <!-- parent pages-->
-                    <div class="nav-item-wrapper"><a class="nav-link active label-1"
+                    <div class="nav-item-wrapper"><a class="nav-link label-1"
                             href="../pages/starter.html" role="button" data-bs-toggle=""
                             aria-expanded="false">
                             <div class="d-flex align-items-center"><span class="nav-link-icon"><span
