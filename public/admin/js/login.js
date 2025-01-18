@@ -6,7 +6,7 @@ login_form.addEventListener("submit", function (event) {
         object[key] = value;
     });
     let json = JSON.stringify(object);
-    fetch(_api_url + 'login', {
+    fetch(_base_url + 'authenticate', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -14,10 +14,7 @@ login_form.addEventListener("submit", function (event) {
         },
         body: json
     })
-    .then(function (res) {
-        console.log(res);
-    })
-    .catch((error) => {
-        console.log("error")
-      });
+        .then(response => response.json())
+        .then(data => console.log("original caller received:", data))
+        .catch(err => console.error(err));
 });

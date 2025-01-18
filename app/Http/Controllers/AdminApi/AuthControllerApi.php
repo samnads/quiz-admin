@@ -8,7 +8,7 @@ use Hash;
 use Illuminate\Http\Request;
 use Validator;
 
-class AuthController extends Controller
+class AuthControllerApi extends Controller
 {
     public function login(Request $request)
     {

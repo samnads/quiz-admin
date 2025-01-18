@@ -109,6 +109,7 @@
                                             <div class="divider-content-center bg-body-emphasis">or use email</div>
                                         </div>
                                         <form id="login">
+                                            @csrf
                                             <div class="mb-3 text-start">
                                                 <label class="form-label" for="email">Email address</label>
                                                 <div class="form-icon-container">
@@ -162,6 +163,7 @@
         </div>
     </main>
     <script>
+        const _base_url = "{{url('')}}/";
         const _api_url = "{{url('api/admin')}}/";
     </script>
     <!-- ===============================================-->
@@ -184,6 +186,7 @@
     {{-- <script src="{{ asset('admin/vendors/feather-icons/feather.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('admin/vendors/dayjs/dayjs.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('admin/js/phoenix.js') }}"></script> --}}
+    <script src="{{ asset('admin/js/admin.js?v=').time() }}"></script>
     <script src="{{ asset('admin/js/login.js?v=').time() }}"></script>
 </body>
 
