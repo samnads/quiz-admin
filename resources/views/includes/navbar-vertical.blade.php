@@ -4,6 +4,26 @@
         <div class="navbar-vertical-content">
             <ul class="navbar-nav flex-column" id="navbarVerticalNav">
                 <li class="nav-item">
+                    <!-- label-->
+                    <p class="navbar-vertical-label">Analytics
+                    </p>
+                    <hr class="navbar-vertical-line" />
+                    <!-- parent pages-->
+                    <div class="nav-item-wrapper"><a class="nav-link label-1 active"
+                            href="{{route('admin.dashboard')}}" role="button" data-bs-toggle=""
+                            aria-expanded="false">
+                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                        data-feather="compass"></span></span><span
+                                    class="nav-link-text-wrapper"><span
+                                        class="nav-link-text">Dashboard</span></span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <p class="navbar-vertical-label">Main
+                    </p>
+                    <hr class="navbar-vertical-line" />
                     <!-- parent pages-->
                     <div class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="#nv-home"
                             role="button" data-bs-toggle="collapse" aria-expanded="false"
@@ -12,7 +32,7 @@
                                 <div class="dropdown-indicator-icon-wrapper"><span
                                         class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
                                     class="nav-link-icon"><span data-feather="pie-chart"></span></span><span
-                                    class="nav-link-text">Home</span>
+                                    class="nav-link-text">Questions</span>
                             </div>
                         </a>
                         <div class="parent-wrapper label-1">
@@ -20,39 +40,16 @@
                                 id="nv-home">
                                 <li class="collapsed-nav-item-title d-none">Home
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="../index.html">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">E
-                                                commerce</span>
+                                <li class="nav-item"><a class="nav-link" href="{{route('admin.questions.index')}}">
+                                        <div class="d-flex align-items-center"><span class="nav-link-text">List All</span>
                                         </div>
                                     </a>
                                     <!-- more inner pages-->
                                 </li>
                                 <li class="nav-item"><a class="nav-link"
-                                        href="../dashboard/project-management.html">
+                                        href="{{route('admin.questions.create')}}">
                                         <div class="d-flex align-items-center"><span
-                                                class="nav-link-text">Project management</span>
-                                        </div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="../dashboard/crm.html">
-                                        <div class="d-flex align-items-center"><span
-                                                class="nav-link-text">CRM</span>
-                                        </div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item"><a class="nav-link"
-                                        href="../dashboard/travel-agency.html">
-                                        <div class="d-flex align-items-center"><span
-                                                class="nav-link-text">Travel agency</span>
-                                        </div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="../apps/social/feed.html">
-                                        <div class="d-flex align-items-center"><span
-                                                class="nav-link-text">Social feed</span>
+                                                class="nav-link-text">Add Question</span>
                                         </div>
                                     </a>
                                     <!-- more inner pages-->
@@ -910,7 +907,7 @@
                         </div>
                     </div>
                     <!-- parent pages-->
-                    <div class="nav-item-wrapper"><a class="nav-link label-1 active" href="../apps/calendar.html"
+                    <div class="nav-item-wrapper"><a class="nav-link label-1" href="../apps/calendar.html"
                             role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                         data-feather="calendar"></span></span><span
