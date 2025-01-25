@@ -1,8 +1,10 @@
 let login_form = document.querySelector('form#login');
-login_form.addEventListener("submit", function (event) {
-    event.preventDefault();
+login_form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let submit_button = e.target.querySelectorAll("[type=submit]")[0];
+    submit_button.disabled = true;
     let object = {};
-    new FormData(event.target).forEach(function (value, key) {
+    new FormData(e.target).forEach(function (value, key) {
         object[key] = value;
     });
     let json = JSON.stringify(object);
@@ -14,7 +16,13 @@ login_form.addEventListener("submit", function (event) {
         },
         body: json
     })
-        .then(response => response.json())
-        .then(data => console.log("original caller received:", data))
-        .catch(err => console.error(err));
+        .then(response => { response.json(); })
+        .then(data => {
+            console.log("original caller received:", data);
+            submit_button.disabled = false;
+        })
+        .catch(err => {
+            console.error(err);
+            submit_button.disabled = false;
+        });
 });

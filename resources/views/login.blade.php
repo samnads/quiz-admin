@@ -129,7 +129,7 @@
                                                         class="fas fa-key text-body fs-9 form-icon"></span>
                                                     <button
                                                         class="btn px-3 py-0 h-100 position-absolute top-0 end-0 fs-7 text-body-tertiary"
-                                                        data-password-toggle="data-password-toggle"><span
+                                                        data-password-toggle="data-password-toggle" type="button"><span
                                                             class="uil uil-eye show"></span><span
                                                             class="uil uil-eye-slash hide"></span></button>
                                                 </div>
